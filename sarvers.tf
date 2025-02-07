@@ -18,10 +18,6 @@ variable "components" {
       name          = "mongodb"
       instance_type = "t2.micro"
     }
-    catalogue = {
-      name          = "catalogue"
-      instance_type = "t2.micro"
-    }
   }
 }
 resource "aws_instance" "instance" {
