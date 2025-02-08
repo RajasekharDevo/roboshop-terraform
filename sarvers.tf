@@ -8,18 +8,7 @@ data "aws_security_group" "launch-wizard-16" {
   name = "launch-wizard-16"
 }
 
-variable "components" {
-  default = {
-    frontend = {
-      name          = "frontend"
-      instance_type = "t2.micro"
-    }
-    mongodb = {
-      name          = "mongodb"
-      instance_type = "t2.micro"
-    }
-  }
-}
+variable "components" {}
 resource "aws_instance" "instance" {
   for_each               = var.components
   ami                    = data.aws_ami.centos.image_id
