@@ -12,7 +12,7 @@ resource "aws_instance" "instance" {
 
     connection {
       type     = "ssh"
-      user     = "centos"
+      user     = "root"
       password = "DevOps321"
       host     = self.private_ip
     }
