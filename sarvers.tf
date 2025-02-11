@@ -17,11 +17,11 @@ resource "null_resource" "provisioner" {
       type ="ssh"
       user = "root"
       password = "DevOps321"
-      host =aws_instance.instance[each.value["name"]).private_ip
+      host =aws_instance.instance[each.value["name"]].private_ip
 }
 inline = [
   "rm -rf roboshop-shell",
-  "git clone https://github.com/raghudevopsb72/roboshop-shell",
+  "git clone https://github.com/RajasekharDevo/roboshop-shell",
   "cd roboshop-shell",
   "sudo bash ${each.value["name"]}.sh ${lookup(each.value,"password" , "null") }"
   ]
