@@ -9,7 +9,7 @@ components = {
   }
   catalogue = {
     name          = "catalogue"
-    instance_type = "t3.micro"
+    instance_type = "t3.medium"
   }
   redis = {
     name          = "redis"
