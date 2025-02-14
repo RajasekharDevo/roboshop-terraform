@@ -7,13 +7,3 @@ module "servers" {
   instance_type  = each.value["inatance_type"]
   password = lookup(each.value, "password", "null")
 }
-
-
-
-
-
-
-
-
-
-}
