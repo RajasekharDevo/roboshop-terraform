@@ -108,11 +108,11 @@ variable "components" {
  # }
 
 
- resource "aws_route53_record" "records" {
-   for_each       = var.components
-   zone_id  = "Z07633651VJKTEQ867N3J"
-   name     = "${each.value["name"]}-dev.rajasekhar72.store"
-   type     = "A"
-   ttl      = 30
-   records  = [aws_instance.instance[each.value]["name"]].private_ip]
- }
+ # resource "aws_route53_record" "records" {
+ #   for_each       = var.components
+ #   zone_id  = "Z07633651VJKTEQ867N3J"
+ #   name     = "${each.value["name"]}-dev.rajasekhar72.store"
+ #   type     = "A"
+ #   ttl      = 30
+ #   records  = [aws_instance.instance[each.value]["name"]].private_ip]
+ # }
